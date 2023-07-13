@@ -5,17 +5,17 @@ let uni = universidad;
 let alumnos = uni.alumnos;
 let docentes = uni.docentes;
 
-console.log(alumnos);
-console.log(docentes);
+//console.log(alumnos);
+//console.log(docentes);
 
 //Acceder a un elemento de Array mediante su índice
-console.log(alumnos[0]);
-console.log(docentes[1]);
+//console.log(alumnos[0]);
+//console.log(docentes[1]);
 
 //Recorrer un Array
 
 alumnos.forEach(alumno =>{
-    console.log(alumno.nombre);
+    //console.log(alumno.nombre);
 });
 
 let materias = [];
@@ -24,10 +24,10 @@ alumnos.forEach(alumno =>{
     materias = alumno.materias;
 });
 
-console.log(materias);
+//console.log(materias);
 
 materias.forEach(materia=>{
-    console.log(materia);
+    //console.log(materia);
 });
 
 let alummnoNuevo = {
@@ -59,17 +59,41 @@ let alummnoNuevo = {
 }
 
 //alumnos.push(alummnoNuevo);
-
 //console.log(alumnos);
+
 
 //El método filter() crea un nuevo array con todos los elementos que cumplan la condición implementada 
 //por la función dada.
+let nombreDocente = [];
 
-const alumnos2 = universidad.alumnos;
+docentes.forEach(name =>{
+    nombreDocente.push(name.nombre);
+});
 
-console.log(alumnos2);
+//console.log(nombreDocente);
 
-
-
-//const resultado = alumnos.filter(letra => letra > 2);
+const resultado = nombreDocente.filter(word => word.length > 6);
 //console.log(resultado);
+
+//Array.prototype.findIndex() - El método findIndex() devuelve el índice del primer elemento de un array 
+//que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1.
+
+let apellidoDocente = [];
+
+docentes.forEach(ape => {
+    apellidoDocente.push(ape.apellidos);
+});
+
+//console.log(apellidoDocente);
+
+const index = apellidoDocente.findIndex(nom => nom === "Jonapa Guillen");
+
+//console.log(index);
+//console.log(apellidoDocente[index]);
+
+//Array.prototype.find() - El método find() devuelve el valor del primer elemento del array que cumple 
+//la función de prueba proporcionada.
+
+const encontrado = apellidoDocente.find(apellido => apellido == "Martinez Estrada");
+//console.log(encontrado);
+
