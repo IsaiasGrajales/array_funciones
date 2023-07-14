@@ -20,11 +20,11 @@ alumnos.forEach(alumno =>{
 
 let materias = [];
 
-alumnos.forEach(alumno =>{
-    materias = alumno.materias;
+alumnos.forEach(alumno=>{
+    materias.push(alumno.materias);
 });
 
-//console.log(materias);
+console.log(materias);
 
 materias.forEach(materia=>{
     //console.log(materia);
@@ -97,3 +97,15 @@ const index = apellidoDocente.findIndex(nom => nom === "Jonapa Guillen");
 const encontrado = apellidoDocente.find(apellido => apellido == "Martinez Estrada");
 //console.log(encontrado);
 
+//Array.prototype.map() - El método map() crea un nuevo array con los resultados de la llamada a la 
+//función indicada aplicados a cada uno de sus elementos.
+const datosMaterias = [];
+
+for(let i=0; i<materias.length; i++){
+    console.log(materias[i]);
+    datosMaterias.push(materias[i]);
+}
+
+for(let i=0; i<datosMaterias.length; i++){
+    
+}
