@@ -43,7 +43,7 @@ export const universidad = {
                 },
                 {
                     materia: "Sistemas operativos",
-                    calificacion: 6,
+                    calificacion: 7,
                     profesor: "Sergio Escobar Almonte",
                     horario: "Lunes 05:00 p.m. - 06:00 p.m."
                 },
@@ -70,7 +70,7 @@ export const universidad = {
                 },
                 {
                     materia: "Sistemas operativos",
-                    calificacion: 9,
+                    calificacion: 8,
                     profesor: "Sergio Escobar Almonte",
                     horario: "Lunes 05:00 p.m. - 06:00 p.m."
                 },

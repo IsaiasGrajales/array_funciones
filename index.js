@@ -99,13 +99,37 @@ const encontrado = apellidoDocente.find(apellido => apellido == "Martinez Estrad
 
 //Array.prototype.map() - El método map() crea un nuevo array con los resultados de la llamada a la 
 //función indicada aplicados a cada uno de sus elementos.
-const datosMaterias = [];
+const calificaciones = [];
+const calificaciones2 = [];
 
-for(let i=0; i<materias.length; i++){
-    console.log(materias[i]);
-    datosMaterias.push(materias[i]);
+for(let i=0; i<materias.length;i++){
+    for(let j=0; j<materias[i].length; j++){
+        calificaciones.push(materias[i][j].calificacion);
+    }
 }
+//console.log(calificaciones);
 
-for(let i=0; i<datosMaterias.length; i++){
-    
-}
+materias.forEach(materia=>{
+    materia.forEach(mate=>{
+        calificaciones2.push(mate.calificacion);
+    })
+})
+//console.log(calificaciones2);
+
+const multiplicacion = calificaciones.map(function(num){
+    return num*2;
+})
+//console.log(multiplicacion);
+
+const materiaDocentes = [];
+
+docentes.forEach(materias=>{
+    materiaDocentes.push(materias);
+});
+
+console.log(materiaDocentes);
+console.log("\n");
+
+materiaDocentes.forEach(materia=>{
+    //console.log(materia.materias);
+});
